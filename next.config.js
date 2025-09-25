@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const nextConfig = {
-  output: 'standalone',
+  // Cloudflare Workers 不支持 standalone 模式
+  output: 'export',
   eslint: {
     dirs: ['src'],
   },
